@@ -6,7 +6,7 @@ def face_detection(video_source=0):
     face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
     # Video kaynağını açın (video_source = 0, web kamerasını kullanır, dosya yolu ise video dosyasını kullanır)
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(video_source)
     while cap.isOpened():
         # Videodan bir kare yakalamak için
         ret, frame = cap.read()
